@@ -103,12 +103,7 @@ return {
     -- keymap.set("n", "<leader>fs", function()
     --   builtin.grep_string({ search = vim.fn.input("Grep > "), desc = "Grep search" })
     -- end)
-    keymap.set(
-      "n",
-      "<leader>fs",
-      require("telescope").extensions.live_grep_args.live_grep_args,
-      { desc = "Advanced grep search" }
-    )
+    keymap.set("n", "<leader>fs", require("telescope").extensions.live_grep_args.live_grep_args, { desc = "Advanced grep search" })
     keymap.set("n", "<leader>fS", builtin.live_grep, { desc = "Basic fuzzy grep search" })
     keymap.set("n", "<leader>fd", builtin.diagnostics, { desc = "Search diagnostics" })
     keymap.set("n", "<leader>fb", builtin.git_commits, { desc = "Search git commits" })
