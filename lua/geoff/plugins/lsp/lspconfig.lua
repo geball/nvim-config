@@ -59,8 +59,8 @@ return {
         vim.lsp.buf.hover()
       end, opts)
 
-      opts.desc = "Signature documentation"
-      keymap.set("n", "gs", function()
+      opts.desc = "Signature help"
+      keymap.set("i", "<C-h>", function()
         vim.lsp.buf.signature_help()
       end, opts)
 

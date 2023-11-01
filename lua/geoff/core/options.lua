@@ -1,9 +1,8 @@
 -- vim.g.mapleader and vim.g.maplocalleader are set in init.lua
 
--- Highlight the current term when searching...
 vim.o.hlcursearch = true
--- ...but not the rest of them
-vim.o.hlsearch = false
+vim.opt.hlsearch = true
+vim.opt.incsearch = true
 
 -- termguicolors are needed for some color schemes
 vim.opt.termguicolors = true
