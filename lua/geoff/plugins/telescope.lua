@@ -56,13 +56,14 @@ return {
       defaults = {
         path_display = { "truncate" },
         mappings = {
-          n = {
-            ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
-          },
+          -- n = {
+          --   ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+          -- },
           i = {
             ["<C-j>"] = actions.cycle_history_next,
             ["<C-k>"] = actions.cycle_history_prev,
-            ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+            ["<C-h>"] = actions.send_selected_to_qflist + actions.open_qflist,
+            ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
           },
         },
       },
