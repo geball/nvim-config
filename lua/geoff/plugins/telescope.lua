@@ -27,6 +27,21 @@ return {
     local actions = require("telescope.actions")
     local themes = require("telescope.themes")
 
+    local select_one_or_multi = function(prompt_bufnr)
+      local picker = require("telescope.actions.state").get_current_picker(prompt_bufnr)
+      local multi = picker:get_multi_selection()
+      if not vim.tbl_isempty(multi) then
+        require("telescope.actions").close(prompt_bufnr)
+        for _, j in pairs(multi) do
+          if j.path ~= nil then
+            vim.cmd(string.format("%s %s", "edit", j.path))
+          end
+        end
+      else
+        require("telescope.actions").select_default(prompt_bufnr)
+      end
+    end
+
     require("telescope").setup({
       -- pickers = {
       --   find_files = {
@@ -62,6 +77,7 @@ return {
           i = {
             ["<C-j>"] = actions.cycle_history_next,
             ["<C-k>"] = actions.cycle_history_prev,
+            ["<CR>"] = select_one_or_multi,
             ["<C-h>"] = actions.send_selected_to_qflist + actions.open_qflist,
             ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
           },
