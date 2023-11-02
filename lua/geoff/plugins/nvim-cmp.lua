@@ -28,8 +28,8 @@ return {
         end,
       },
       mapping = {
-        ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Replace }),
-        ["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Replace }),
+        ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+        ["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
         ["<C-d>"] = cmp.mapping.scroll_docs(-4),
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
         ["<C-e>"] = cmp.mapping.abort(),
@@ -40,13 +40,7 @@ return {
           }),
           { "i", "c" }
         ),
-        ["<c-space>"] = cmp.mapping(
-          cmp.mapping.complete({
-            behavior = cmp.ConfirmBehavior.Insert,
-            select = true,
-          }),
-          { "i", "c" }
-        ),
+        ["<c-space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
 
         ["<tab>"] = cmp.config.disable,
       },
