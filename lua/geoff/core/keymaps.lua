@@ -62,12 +62,7 @@ vim.keymap.set({ "n", "v" }, "<localleader>d", '"_d', { desc = "Delete to black 
 vim.keymap.set("n", "Q", "<nop>")
 
 -- Replace term under cursor
-vim.keymap.set(
-  "n",
-  "<leader>rp",
-  [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
-  { desc = "Replace via Substitution" }
-)
+vim.keymap.set("n", "<leader>rp", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace via Substitution" })
 
 -- Buffer keymaps
 vim.keymap.set("n", "<leader>bc", vim.cmd.bdelete, { desc = "Close buffer" })
@@ -107,14 +102,3 @@ end
 vim.keymap.set("n", "<leader>gd", toggleDiffview, { desc = "Toggle diffview" })
 -- See :h wildcharm for why <C-Z> is used
 vim.keymap.set("n", "<leader>gD", ":Diffview<C-Z>", { desc = "Trigger :Diffview in command line" })
-
--- Flash keymaps
-vim.keymap.set("n", "<leader>jf", function()
-  require("flash").jump()
-end, { desc = "Flash jump" })
-vim.keymap.set("n", "<leader>jt", function()
-  require("flash").treesitter()
-end, { desc = "Flash current node" })
-vim.keymap.set("n", "<leader>jr", function()
-  require("flash").treesitter_search()
-end, { desc = "Flash search current view" })
