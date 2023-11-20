@@ -102,3 +102,7 @@ end
 vim.keymap.set("n", "<leader>gd", toggleDiffview, { desc = "Toggle diffview" })
 -- See :h wildcharm for why <C-Z> is used
 vim.keymap.set("n", "<leader>gD", ":Diffview<C-Z>", { desc = "Trigger :Diffview in command line" })
+
+-- GitHub Copilot
+vim.api.nvim_set_keymap("i", "<M-y>", "copilot#Accept()", { expr = true, silent = true })
+vim.cmd("let g:copilot_no_tab_map = v:true")
