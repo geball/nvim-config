@@ -94,9 +94,6 @@ return {
     -- Enable advanced git search
     pcall(require("telescope").load_extension, "advanced_git_search")
 
-    -- Enable neoclip
-    require("telescope").load_extension("neoclip")
-
     -- Enable harpoon
     require("telescope").load_extension("harpoon")
 
