@@ -1,6 +1,5 @@
 -- vim.g.mapleader and vim.g.maplocalleader are set in init.lua
 
-vim.o.hlcursearch = true
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
