@@ -25,9 +25,6 @@ return {
         vim.lsp.buf.code_action()
       end, opts)
 
-      opts.desc = "Neoclip"
-      keymap.set("n", "<leader>cl", "<cmd>Telescope neoclip<CR>", opts)
-
       opts.desc = "Go to definition"
       keymap.set("n", "gd", function()
         vim.lsp.buf.definition()
