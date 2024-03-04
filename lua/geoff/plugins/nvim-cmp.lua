@@ -36,7 +36,7 @@ return {
         ["<C-e>"] = cmp.mapping.abort(),
         ["<c-y>"] = cmp.mapping(
           cmp.mapping.confirm({
-            behavior = cmp.ConfirmBehavior.Replace,
+            behavior = cmp.ConfirmBehavior.Insert,
             select = false,
           }),
           { "i", "c" }
