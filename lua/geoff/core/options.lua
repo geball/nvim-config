@@ -3,6 +3,11 @@
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
+-- Show the cursor line
+vim.opt.cursorline = true
+-- This would highlight only the number column
+-- vim.opt.cursorlineopt = "number"
+
 -- termguicolors are needed for some color schemes
 vim.opt.termguicolors = true
 
