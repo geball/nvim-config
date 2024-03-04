@@ -13,10 +13,11 @@ return {
   },
   config = function()
     local cmp = require("cmp")
-
     local luasnip = require("luasnip")
-
     local lspkind = require("lspkind")
+    local sg = require("sg")
+
+    sg.setup({})
 
     cmp.setup({
       completion = {
@@ -49,6 +50,7 @@ return {
         { name = "nvim_lsp" },
         { name = "nvim_lua" },
         { name = "luasnip" },
+        { name = "sg" },
         { name = "copilot" },
         { name = "path" },
         { name = "buffer", keyword_length = 5 },
@@ -66,6 +68,7 @@ return {
             nvim_lua = "[api]",
             path = "[path]",
             luasnip = "[snip]",
+            sg = "[Cody]",
           },
         }),
       },
