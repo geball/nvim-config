@@ -25,7 +25,7 @@ return {
       -- list of servers for mason to install
       ensure_installed = {
         "gopls",
-        "tsserver",
+        -- "tsserver",
         "rust_analyzer",
         "html",
         "cssls",

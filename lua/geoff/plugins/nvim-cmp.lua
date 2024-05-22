@@ -6,7 +6,7 @@ return {
     "saadparwaiz1/cmp_luasnip", -- Snippet source for nvim-cmp
     "hrsh7th/cmp-buffer", -- Buffer source for nvim-cmp
     "hrsh7th/cmp-path", -- Path source for nvim-cmp
-    "hrsh7th/cmp-cmdline", -- Cmdline completion source for nvim-cmp
+    -- "hrsh7th/cmp-cmdline", -- Cmdline completion source for nvim-cmp
     "hrsh7th/cmp-nvim-lsp", -- Adds LSP completion capabilities
     "hrsh7th/cmp-nvim-lua", -- Lua completion source for nvim-cmp
     "onsails/lspkind.nvim", -- vs-code like pictograms
@@ -54,7 +54,8 @@ return {
         { name = "copilot" },
         { name = "path" },
         { name = "buffer", keyword_length = 5 },
-        { name = "cmdline" },
+        -- Removed due to this bug: https://github.com/hrsh7th/nvim-cmp/issues/1310#issuecomment-1326712312
+        -- { name = "cmdline" },
       }),
       -- configure pictograms in completion menu
       formatting = {

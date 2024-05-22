@@ -4,6 +4,9 @@ return {
     -- Creates a debugger UI
     "rcarriga/nvim-dap-ui",
 
+    -- Required as of v4.0.0
+    "nvim-neotest/nvim-nio",
+
     -- Debug adapters
     "williamboman/mason.nvim",
     "jay-babu/mason-nvim-dap.nvim",
