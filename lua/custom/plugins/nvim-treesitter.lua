@@ -19,6 +19,14 @@ return {
 
         highlight = {
           enable = true,
+          -- Disable treesitter on files larger than 200 kB
+          disable = function(_, buf)
+            local max_filesize = 200 * 1024 -- 200 kB
+            local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+            if ok and stats and stats.size > max_filesize then
+              return true
+            end
+          end,
         },
         indent = { enable = true },
         -- enable autotagging (w/ nvim-ts-autotag plugin)
@@ -29,9 +37,9 @@ return {
         ensure_installed = {
           "c",
           "css",
-          "dockerfile",
           "gitignore",
           "go",
+          "graphql",
           "html",
           "javascript",
           "jq",
