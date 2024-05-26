@@ -100,7 +100,7 @@ return {
 
     keymap.set("n", "<leader>fr", builtin.oldfiles, { desc = "Show recently opened files" })
     keymap.set("n", "<leader>bb", builtin.buffers, { desc = "Show current buffers" })
-    keymap.set("n", "<leader>ff", function()
+    keymap.set("n", "<leader>/", function()
       builtin.current_buffer_fuzzy_find(themes.get_dropdown({
         winblend = 10,
         previewer = false,
