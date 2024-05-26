@@ -94,9 +94,6 @@ return {
     -- Enable advanced git search
     pcall(require("telescope").load_extension, "advanced_git_search")
 
-    -- Enable harpoon
-    require("telescope").load_extension("harpoon")
-
     -- set keymaps
     local keymap = vim.keymap
     local builtin = require("telescope.builtin")
