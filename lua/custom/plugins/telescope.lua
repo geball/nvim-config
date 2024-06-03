@@ -110,6 +110,9 @@ return {
     keymap.set("n", "<leader>fa", builtin.find_files, { desc = "Search all files" })
     keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Search in help" })
     keymap.set("n", "<leader>ft", builtin.grep_string, { desc = "Search for current word" })
+    keymap.set("n", "<leader>fc", function()
+      builtin.find_files({ cwd = vim.fn.stdpath("config") })
+    end, { desc = "Search nvim config files" })
     -- live_grep_args does the same, but with highlighting
     -- keymap.set("n", "<leader>fs", function()
     --   builtin.grep_string({ search = vim.fn.input("Grep > "), desc = "Grep search" })
