@@ -61,6 +61,7 @@ vim.o.smartcase = true
 
 -- Keep signcolumn on by default
 vim.wo.signcolumn = "yes"
+opt.shada = { "'10", "<0", "s10", "h" }
 
 -- Make dash part of a word
 vim.opt.iskeyword:append("-")
