@@ -65,7 +65,7 @@ vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<leader>rp", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace via Substitution" })
 
 -- Buffer keymaps
-vim.keymap.set("n", "<leader>bc", vim.cmd.bdelete, { desc = "Close buffer" })
+vim.keymap.set("n", "<leader>bc", "<cmd>wsh<CR><BAR>:bdelete<CR>", { desc = "Close buffer" })
 vim.keymap.set("n", "<leader>bn", vim.cmd.bnext, { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>bp", vim.cmd.bprevious, { desc = "Previous buffer" })
 vim.keymap.set("n", "<leader>bl", "<cmd>BufferLinePick<cr>", { desc = "Pick buffer from list" })
