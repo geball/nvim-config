@@ -1,18 +1,20 @@
+local opt = vim.opt
+
 -- vim.g.mapleader and vim.g.maplocalleader are set in init.lua
 
-vim.opt.hlsearch = true
-vim.opt.incsearch = true
+opt.hlsearch = true
+opt.incsearch = true
 
 -- Show the cursor line
-vim.opt.cursorline = true
+opt.cursorline = true
 -- This would highlight only the number column
--- vim.opt.cursorlineopt = "number"
+-- opt.cursorlineopt = "number"
 
 -- termguicolors are needed for some color schemes
-vim.opt.termguicolors = true
+opt.termguicolors = true
 
 -- if the color scheme offers dark mode, use it
-vim.opt.background = "dark"
+opt.background = "dark"
 
 -- Make line numbers default
 vim.wo.number = true
@@ -31,10 +33,10 @@ vim.o.breakindent = true
 vim.o.autoindent = true
 
 -- line wrapping
-vim.opt.wrap = true
+opt.wrap = true
 
 -- Backspace handling
-vim.opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line, or insert mode start position
+opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line, or insert mode start position
 
 -- Set tabs to always be 2 spaces
 vim.o.tabstop = 2
@@ -60,11 +62,11 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 -- Keep signcolumn on by default
-vim.wo.signcolumn = "yes"
+opt.signcolumn = "yes"
 opt.shada = { "'10", "<0", "s10", "h" }
 
 -- Make dash part of a word
-vim.opt.iskeyword:append("-")
+opt.iskeyword:append("-")
 
 -- Decrease update time
 vim.o.updatetime = 250
