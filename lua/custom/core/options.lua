@@ -4,6 +4,7 @@ local opt = vim.opt
 
 opt.hlsearch = true
 opt.incsearch = true
+opt.inccommand = "split"
 
 -- Show the cursor line
 opt.cursorline = true
