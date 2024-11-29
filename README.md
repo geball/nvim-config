@@ -1,9 +1,6 @@
 # nvim-config
 
-This repo contains my Neovim config, which has been adapted / inspired largely from the work of:
-
-- [TJ DeVries](https://github.com/tjdevries/config_manager)
-- [Josean Martinez](https://github.com/josean-dev/dev-environment-files)
+This repo contains my Neovim config.
 
 ## Getting started
 
