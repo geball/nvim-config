@@ -1,6 +1,3 @@
 # Ignore .bak files
 *.bak
 
-# Ignoring lazy lock file
-lazy-lock.json
-
