@@ -201,7 +201,7 @@ require("lazy").setup({
     branch = "0.1.x",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      { -- If encountering errors, see telescope-fzf-native README for installation instructions
+      {
         "nvim-telescope/telescope-fzf-native.nvim",
         build = "make",
         cond = function()
@@ -552,8 +552,6 @@ require("lazy").setup({
         java = { "google-java-format" },
         markdown = { "prettierd", "prettier", stop_after_first = true },
         html = { "htmlbeautifier" },
-        bash = { "beautysh" },
-        proto = { "buf" },
         rust = { "rustfmt" },
         yaml = { "yamlfix" },
         toml = { "taplo" },
@@ -710,7 +708,8 @@ require("lazy").setup({
       --  - va)  - [V]isually select [A]round [)]paren
       --  - yinq - [Y]ank [I]nside [N]ext [Q]uote
       --  - ci'  - [C]hange [I]nside [']quote
-      require("mini.ai").setup({ n_lines = 500 })
+      local ai = require("mini.ai")
+      ai.setup({ n_lines = 500 })
 
       -- Add/delete/replace surroundings (brackets, quotes, etc.)
       --
@@ -719,11 +718,7 @@ require("lazy").setup({
       -- - sr)'  - [S]urround [R]eplace [)] [']
       require("mini.surround").setup()
 
-      -- Simple and easy statusline.
-      --  You could remove this setup call if you don't like it,
-      --  and try some other statusline plugin
       local statusline = require("mini.statusline")
-      -- set use_icons to true if you have a Nerd Font
       statusline.setup({ use_icons = vim.g.have_nerd_font })
 
       -- You can configure sections in the statusline by overriding their
@@ -733,6 +728,8 @@ require("lazy").setup({
       statusline.section_location = function()
         return "%2l:%-2v"
       end
+
+      require("mini.tabline").setup()
 
       require("mini.bracketed").setup()
 
