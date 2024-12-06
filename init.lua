@@ -30,7 +30,8 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 8
 vim.opt.sidescroll = 8
 vim.opt.iskeyword:append("-")
-vim.opt.spelllang = { "en_ca,en_us,en" }
+vim.opt.spelllang = { "en_ca" }
+vim.opt.shiftwidth = 2
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
