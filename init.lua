@@ -36,6 +36,10 @@ vim.opt.shiftwidth = 2
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
+-- Deal with movements when there's word wrap
+vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+
 vim.keymap.set("n", "<leader>a", "ggVG<C-$>", { desc = "Select All" })
 
 -- Don't let me use shift-arrows in insert mode
