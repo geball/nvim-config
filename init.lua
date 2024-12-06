@@ -133,7 +133,7 @@ vim.opt.rtp:prepend(lazypath)
 --
 require("lazy").setup({
   -- Use `opts = {}` to force a plugin to be loaded.
-  "tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
+  -- "tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
   -- See `:help gitsigns` to understand what the configuration keys do
   {
     "lewis6991/gitsigns.nvim",
